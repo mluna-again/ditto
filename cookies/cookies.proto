@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package cookies;
+
+option go_package = "ditto/cookies";
+
+message Cookie {
+  string flavor = 1;
+}
+
+service CookieTraveler {
+  rpc SendCookie (Cookie) returns (Cookie);
+}
